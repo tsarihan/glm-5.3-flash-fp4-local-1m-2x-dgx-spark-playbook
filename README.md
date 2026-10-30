@@ -159,7 +159,7 @@ The vision encoder budget costs ~2.5 GiB of KV. At `GMU=0.82` the KV pool comput
 6.93 GiB < the 7.48 GiB one full 1M request needs (max 958,464) — the engine refuses to start
 with a "KV shortfall" error that never mentions vision (same failure shape as the old lane).
 At 0.84: KV **1,307,683 tokens (1.25× at 1M)**. Text-only at 0.82 gives 1,327,926 (1.27×).
-Post-load free memory with 4 images + 1 video enabled: spark-1 ~6–7 GiB, spark-2 ~9 GiB —
+Post-load free memory with 4 images + 1 video enabled: rank-0 node ~6–7 GiB, rank-1 node ~9 GiB —
 that's why `memguard.sh` exists.
 
 ### 6. The engine can freeze dead while every container looks healthy

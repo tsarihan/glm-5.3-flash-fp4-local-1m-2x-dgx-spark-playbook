@@ -1,4 +1,4 @@
-"""GLM validation probe: decode tok/s probe + prefix-cache A/B against spark-1 :8000.
+"""GLM validation probe: decode tok/s probe + prefix-cache A/B against rank-0 node :8000.
 
 usage:
   python3 probe.py decode                 # long-answer decode speed probe (short prompt)

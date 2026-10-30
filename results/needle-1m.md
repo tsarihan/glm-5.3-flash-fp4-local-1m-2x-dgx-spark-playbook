@@ -8,7 +8,7 @@ else.
 
 - prompt tokens: **994,019** (needles at 3% and 96% depth)
 - pass 1 (cold): prefill 573 s = **1,734 tok/s**; needle A 3% **PASS**; needle B 96% **PASS**
-- lowest node free memory during: spark-1 5 GiB, spark-2 8 GiB
+- lowest node free memory during: rank-0 node 5 GiB, rank-1 node 8 GiB
 
 ## 2026-10-29 — adaptive MTP + `--recurrent-checkpoint-policy aligned`, same lane
 

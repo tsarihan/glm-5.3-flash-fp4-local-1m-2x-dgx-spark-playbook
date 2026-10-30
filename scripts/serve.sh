@@ -14,10 +14,10 @@
 # --recurrent-checkpoint-policy aligned (eugr #416): lets the hybrid-Mamba recurrent state
 # checkpoint alongside KV blocks, so repeat prefix hits (same repo + new question) return in
 # seconds instead of a full re-prefill; default "auto" loses the Mamba state at request end.
-# usage: NODE_RANK=0 ./serve.sh   on spark-1 (API head, port 8000)
-#        NODE_RANK=1 ./serve.sh   on spark-2 (headless)
+# usage: NODE_RANK=0 ./serve.sh   on rank-0 node (API head, port 8000)
+#        NODE_RANK=1 ./serve.sh   on rank-1 node (headless)
 set -euo pipefail
-NODE_RANK="${NODE_RANK:?set NODE_RANK=0 on spark-1, 1 on spark-2}"
+NODE_RANK="${NODE_RANK:?set NODE_RANK=0 on rank-0 node, 1 on rank-1 node}"
 IMAGE="${IMAGE:-vllm-node-b12x:fi-b1f081e6}"
 MODEL="${MODEL:-/data/models/glm-5.3-flash-fp4-local-nvidia}"
 NAME="${NAME:-glm53-fp4local-r$NODE_RANK-$(date +%m%d-%H%M%S)}"

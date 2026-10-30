@@ -39,7 +39,7 @@ The collapse was chased for most of a day:
 | KV pool / profiling batch | the usual suspects | dip is post-load, per-node, and eats *whatever* is free |
 
 That last property was the tell. A fixed-size spike would leave a fixed remainder; this ate
-all of it on both nodes independently — spark-2 hit 0 GiB while spark-1 was still loading.
+all of it on both nodes independently — rank-1 node hit 0 GiB while rank-0 node was still loading.
 The memtrace showed the growth was all "unaccounted" GPU allocations (91 → 114 GiB) while
 anonymous memory stayed ~4 GiB, and the vLLM debug log contained the allocator confession:
 `Released 12.18GiB of cached device memory under memory pressure`. The PyTorch caching
