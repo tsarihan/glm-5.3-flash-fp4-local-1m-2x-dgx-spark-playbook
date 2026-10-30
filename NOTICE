@@ -1,0 +1,17 @@
+GLM-5.3-Flash FP4-Local at 1M context on 2x DGX Spark (GB10) — serving playbook and benchmarks
+Copyright (c) 2026 Tom Sarihan, Desnet AI LLC
+
+Licensed under the Apache License, Version 2.0.
+
+This work builds on, and is measured against, the following third-party projects.
+All trademarks and model weights remain the property of their respective owners.
+
+  GLM-5.3-Flash                Z.ai (zai-org)
+  GLM-5.3-Flash-NVFP4          RedHatAI (compressed-tensors quantization)
+  GLM-5.3-Flash-GGUF           unsloth
+  Qwen3.8-27B                  Alibaba Qwen team (comparison baseline)
+  SWE-bench Pro                ScaleAI
+  mini-swe-agent               SWE-agent authors
+  vLLM, SGLang, llama.cpp      respective upstream projects
+
+No model weights are redistributed in this repository. Scripts and results only.
