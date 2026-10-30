@@ -220,7 +220,9 @@ Single-stream honest numbers are above; for calibration, published community fig
 60–116 tok/s for this model are **multi-stream aggregates**, and one much-cited 47.7 tok/s
 figure is a **4× GB10 TP=4** run on a different (official NVFP4) image — different hardware
 count, different build. On two GB10 nodes, single stream, at 1M context with vision resident,
-~33 tok/s decode and ~1,700–2,100 tok/s prefill is the reproducible envelope.
+~33 tok/s decode and ~1,700–2,100 tok/s prefill is the reproducible envelope. The measured
+1/2/4/8-stream ladder (99 tok/s aggregate at 8 streams; adaptive MTP acceptance *rises* to
+~60% at batch 8) is in [results/stream-ladder.md](results/stream-ladder.md).
 
 `--gpu-memory-utilization 0.85` is the proven ceiling on these nodes; 0.90 wedged one. The
 dip in finding #1 eats whatever is free, so free-memory floor monitoring (`memguard.sh`)
