@@ -1,4 +1,4 @@
-"""1M-token needle-in-haystack generator + sender for GLM FP4-Local on spark-1:8000.
+"""1M-token needle-in-haystack generator + sender for GLM FP4-Local on the rank-0 node :8000.
 
 Recreates the 2026-10-29 11:21 run shape (needle-glm-1m.txt):
   994,019 prompt tokens, filler of numbered Records, passphrases planted after
