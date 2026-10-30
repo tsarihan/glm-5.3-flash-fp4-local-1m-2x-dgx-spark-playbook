@@ -3,7 +3,7 @@
 The server answers the Anthropic `/v1/messages` API natively, so a `claude` CLI harness can
 be pointed straight at it — no proxy, no protocol shim. Via
 [model-council-mcp](https://github.com/tsarihan/model-council-mcp), one solo
-`claude-cli`-harness member backed by this GLM lane (`claude-cli-vllm-dgx-spark-1`) ran a
+`claude-cli`-harness member backed by this GLM lane (`claude-cli-vllm-<your-server-id>`) ran a
 whole-repo read-only review of a 34-crate Rust workspace, with full-repo tool access
 (Read/Grep/Glob confined to the repo root) and file output.
 

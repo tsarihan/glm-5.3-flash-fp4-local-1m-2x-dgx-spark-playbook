@@ -14,7 +14,7 @@
 #
 # usage: NODE_RANK=<0|1> nohup ./apiwatch.sh >/dev/null 2>&1 &
 set -uo pipefail
-NODE_RANK="${NODE_RANK:?set NODE_RANK=0 on spark-1, 1 on spark-2}"
+NODE_RANK="${NODE_RANK:?set NODE_RANK=0 on the rank-0 node, 1 on the rank-1}"
 D=$HOME/llmruntimes/glm53-fp4local
 API="${API:-http://${NODE0_MGMT}:8000}"  # rank-0 management IP:port; POLL="${POLL:-60}"; NEEDS="${NEEDS:-3}"
 DRAIN_GB="${DRAIN_GB:-100}"; STARTUP_GRACE="${STARTUP_GRACE:-900}"
